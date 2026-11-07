@@ -1,5 +1,5 @@
 {
-  "name": "bain_restaurant_recommender_client",
+  "name": "restaurant_recommender_client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

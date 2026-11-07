@@ -1,7 +1,3 @@
-//
-// NOTE**************
-// googlemapsapi not free. dont include in submission. add it to a seperate branch
-
 import {
   Dialog,
   DialogTitle,
@@ -36,9 +32,6 @@ type Props = {
   restaurantName?: string;
 };
 
-const OFFICE_LAT = 43.670116;
-const OFFICE_LNG = -79.385757;
-
 // // Icon mapping for travel modes
 const modeIcons: Record<TravelMode, React.ReactNode> = {
   driving: <DirectionsCarIcon fontSize="small" />,
@@ -59,13 +52,13 @@ export default function DirectionsModal({
   const [customOriginInput, setCustomOriginInput] = useState('');
   const [customOriginCommitted, setCustomOriginCommitted] = useState('');
 
-  const OFFICE_ADDRESS = '2 Bloor Street East, Toronto, ON';
+  const DEFAULT_ORIGIN_ADDRESS = 'Toronto City Hall, 100 Queen Street West, Toronto, ON';
 
   // origin for the map embed
   const origin =
     useCustomOrigin && customOriginCommitted.trim().length > 0
       ? encodeURIComponent(customOriginCommitted.trim())
-      : encodeURIComponent(OFFICE_ADDRESS);
+      : encodeURIComponent(DEFAULT_ORIGIN_ADDRESS);
 
   const embedUrl = `https://www.google.com/maps/embed/v1/directions?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&origin=${origin}&destination=${destLat},${destLng}&mode=${mode}`;
 
@@ -87,7 +80,7 @@ export default function DirectionsModal({
           Directions to {restaurantName || 'this restaurant'}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          From {useCustomOrigin ? 'custom location' : 'Bain Toronto Office'} (
+          From {useCustomOrigin ? 'custom location' : 'Toronto City Hall'} (
           {mode})
         </Typography>
         <IconButton

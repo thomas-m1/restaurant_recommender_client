@@ -80,7 +80,7 @@ export default function RestaurantCard({ restaurant }: Props) {
               </Typography>
             </Box>
             <Typography variant="body2" color="text.secondary" ml={3}>
-              {restaurant.distance_from_office_km.toFixed(1)} km from office -
+              {restaurant.distance_from_office_km.toFixed(1)} km from City Hall -
               <Typography
                 variant="body2"
                 color="primary"

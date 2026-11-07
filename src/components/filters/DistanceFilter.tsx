@@ -30,7 +30,7 @@ const DistanceFilter: React.FC<DistanceFilterProps> = ({ value, onChange }) => {
     <Box>
       <Typography variant="subtitle1" fontWeight={600} gutterBottom>
         <LocationOnIcon sx={{ verticalAlign: 'middle', mr: 1 }} />
-        Distance from Office
+        Distance from City Hall
       </Typography>
       <ToggleButtonGroup
         value={value?.toString() ?? null} // convert num to string for toggleButton
@@ -41,7 +41,7 @@ const DistanceFilter: React.FC<DistanceFilterProps> = ({ value, onChange }) => {
           flexWrap: 'wrap',
           gap: 1,
         }}
-        aria-label="Distance from Office"
+        aria-label="Distance from City Hall"
       >
         {/* Distance options */}
         <ToggleButton value="1" aria-label="Less than 1 kilometer">

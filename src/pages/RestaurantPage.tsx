@@ -83,17 +83,17 @@ const RestaurantPage = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ bgcolor: '#cb2026' }}>
+      <AppBar position="static" sx={{ bgcolor: '#0f766e' }}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Bain & Company
+            Restaurant Explorer
           </Typography>
         </Toolbar>
       </AppBar>
 
       <Container maxWidth="xl" sx={{ mt: 4 }}>
         <Typography variant="h4" align="center" fontWeight="bold" gutterBottom>
-          Bain Restaurant Recommendation System
+          Discover Your Next Favorite Restaurant
         </Typography>
 
         <Box display="flex" mt={4}>
@@ -125,7 +125,7 @@ const RestaurantPage = () => {
                 >
                   {showSuggestedOnly
                     ? 'Showing Suggested'
-                    : 'Show Partner Suggested Only'}
+                    : 'Show Community Suggested Only'}
                 </Button>
                 <SearchButton onClick={handleSearch} loading={loading} />
               </Box>
